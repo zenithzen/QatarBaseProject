@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwitchWidget">
+        <attr name="defaultTextColor" format="color" />
+        <attr name="selectedTextColor" format="color" />
+        <attr name="selectorColor" format="color" />
+        <attr name="selectorCornerRadius" format="dimension" />
+        <attr name="switchItems" format="reference" />
+        <attr name="fontFamilyEn" format="reference" />
+        <attr name="fontFamilyAr" format="reference" />
+        <attr name="android:textSize" />
+        <attr name="android:lineSpacingExtra" />
+    </declare-styleable>
+</resources>

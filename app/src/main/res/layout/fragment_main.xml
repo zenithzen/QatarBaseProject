@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomNavigationLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:elevation="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nestedNavigationContainer"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@+id/navDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/nested" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdLine3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gdLine4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".75" />
+        <!--   <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/bottomNavLayout"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent">-->
+        <View
+            android:id="@+id/navDivider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/borderColor"
+            app:layout_constraintBottom_toTopOf="@+id/dashBoardButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomNavSafeBottomGuide"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="24dp" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dashSelectedLayout"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:translationY="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/dashBoardButton"
+            app:layout_constraintEnd_toStartOf="@+id/gdLine1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dashBoardButton">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/dashBackgroundView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@color/colorPrimary" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/dashSelectedImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/dashbord_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dashBoardButton"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavSafeBottomGuide"
+            app:layout_constraintEnd_toStartOf="@id/gdLine1"
+            app:layout_constraintStart_toStartOf="parent"
+
+            tools:ignore="TextContrastCheck">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/dashBoardButtonImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/dashbord_icon"
+                android:visibility="visible"
+                android:alpha="0"
+                app:tint="@color/black_50"
+                app:layout_constraintBottom_toTopOf="@id/dashBoardButtonText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dashBoardButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="end"
+
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/txt_dashbord"
+                android:textColor="@color/black_50"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/PerformanceButton"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavSafeBottomGuide"
+            app:layout_constraintEnd_toStartOf="@id/gdLine2"
+            app:layout_constraintStart_toEndOf="@id/dashBoardButton">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/PerformanceButtonImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:importantForAccessibility="no"
+                app:tint="@color/black_50"
+                android:src="@drawable/performance_icon"
+                app:layout_constraintBottom_toTopOf="@id/PerformanceButtonText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/PerformanceButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/txt_performance"
+                android:textColor="@color/black_50"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activityButton"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavSafeBottomGuide"
+            app:layout_constraintEnd_toStartOf="@id/gdLine3"
+            app:layout_constraintStart_toEndOf="@id/PerformanceButton"
+
+            tools:ignore="TextContrastCheck">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/activityButtonImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                app:tint="@color/black_50"
+                android:src="@drawable/ic_activities"
+                app:layout_constraintBottom_toTopOf="@id/activityButtonText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/activityButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/txt_activities"
+                android:textColor="@color/black_50"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/archiveButton"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavSafeBottomGuide"
+            app:layout_constraintEnd_toStartOf="@id/gdLine4"
+            app:layout_constraintStart_toEndOf="@id/activityButton">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/archiveButtonImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_archive"
+                app:tint="@color/black_50"
+                app:layout_constraintBottom_toTopOf="@id/archiveButtonText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/archiveButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/txt_Archive"
+                android:textColor="@color/black_50"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/announcementButton"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavSafeBottomGuide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/archiveButton">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/announcementButtonImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_annoncement"
+                app:tint="@color/black_50"
+                app:layout_constraintBottom_toTopOf="@id/announcementButtonText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/announcementButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/txt_Announcements"
+                android:textColor="@color/black_50"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TextContrastCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

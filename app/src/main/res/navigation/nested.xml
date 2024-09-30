@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.gco.gco.ui.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/performanceFragment"
+        android:name="com.gco.gco.ui.Performance.PerformanceFragment"
+        android:label="fragment_performance"
+        tools:layout="@layout/fragment_performance" />
+    <fragment
+        android:id="@+id/activitiesFragment"
+        android:name="com.gco.gco.ui.activities.ActivitiesFragment"
+        android:label="fragment_activities"
+        tools:layout="@layout/fragment_activities" />
+    <fragment
+        android:id="@+id/archivesFragment"
+        android:name="com.gco.gco.ui.archives.ArchivesFragment"
+        android:label="ArchivesFragment"
+        tools:layout="@layout/fragment_archives"
+        />
+    <fragment
+        android:id="@+id/announcementsFragment"
+        android:name="com.gco.gco.ui.announcements.AnnouncementsFragment"
+        android:label="AnnouncementsFragment"
+        tools:layout="@layout/fragment_announcements"
+
+        />
+</navigation>

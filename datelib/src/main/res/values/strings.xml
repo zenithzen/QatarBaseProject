@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="datelib_month_01">January</string>
+    <string name="datelib_month_02">February</string>
+    <string name="datelib_month_03">March</string>
+    <string name="datelib_month_04">April</string>
+    <string name="datelib_month_05">May</string>
+    <string name="datelib_month_06">June</string>
+    <string name="datelib_month_07">July</string>
+    <string name="datelib_month_08">August</string>
+    <string name="datelib_month_09">September</string>
+    <string name="datelib_month_10">October</string>
+    <string name="datelib_month_11">November</string>
+    <string name="datelib_month_12">December</string>
+    <string name="datelib_month_short_01">Jan</string>
+    <string name="datelib_month_short_02">Feb</string>
+    <string name="datelib_month_short_03">Mar</string>
+    <string name="datelib_month_short_04">Apr</string>
+    <string name="datelib_month_short_05">May</string>
+    <string name="datelib_month_short_06">Jun</string>
+    <string name="datelib_month_short_07">Jul</string>
+    <string name="datelib_month_short_08">Aug</string>
+    <string name="datelib_month_short_09">Sep</string>
+    <string name="datelib_month_short_10">Oct</string>
+    <string name="datelib_month_short_11">Nov</string>
+    <string name="datelib_month_short_12">Dec</string>
+    <string name="datelib_am">AM</string>
+    <string name="datelib_pm">PM</string>
+    <string name="datelib_day_01">Sunday</string>
+    <string name="datelib_day_02">Monday</string>
+    <string name="datelib_day_03">Tuesday</string>
+    <string name="datelib_day_04">Wednesday</string>
+    <string name="datelib_day_05">Thursday</string>
+    <string name="datelib_day_06">Friday</string>
+    <string name="datelib_day_07">Saturday</string>
+    <string name="datelib_day_short_01">Sun</string>
+    <string name="datelib_day_short_02">Mon</string>
+    <string name="datelib_day_short_03">Tue</string>
+    <string name="datelib_day_short_04">Wed</string>
+    <string name="datelib_day_short_05">Thu</string>
+    <string name="datelib_day_short_06">Fri</string>
+    <string name="datelib_day_short_07">Sat</string>
+    <string name="datelib_day_single_01" translatable="false">S</string>
+    <string name="datelib_day_single_02" translatable="false">M</string>
+    <string name="datelib_day_single_03" translatable="false">T</string>
+    <string name="datelib_day_single_04" translatable="false">W</string>
+    <string name="datelib_day_single_05" translatable="false">T</string>
+    <string name="datelib_day_single_06" translatable="false">F</string>
+    <string name="datelib_day_single_07" translatable="false">S</string>
+</resources>
